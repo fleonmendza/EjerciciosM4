@@ -13,8 +13,8 @@ class FirstActivity : AppCompatActivity() {
             val name = result.data?.getStringExtra("EXTRA_NAME")
             val lastName = result.data?.getStringExtra("EXTRA_LASTNAME")
             val age = result.data?.getIntExtra("EXTRA_AGE", 0)
-            Toast.makeText(this, "resultCode = ${result.resultCode} EXTRA_IS_OK = ${result.data?.getBooleanExtra("EXTRA_IS_OK",
-                false)} \n Mi nombre es: ${name} \n Mi apellido es: ${lastName} \n Mi edad: ${age}", Toast.LENGTH_SHORT).show()
+            val valid = result.data?.getBooleanExtra("EXTRA_IS_TRUE", false)
+            Toast.makeText(this, "Estado: ${valid} \n Mi nombre es: ${name} \n Mi apellido es: ${lastName} \n Mi edad: ${age}", Toast.LENGTH_SHORT).show()
         }else{
             Toast.makeText(this, "CANCELED", Toast.LENGTH_SHORT).show()
         }
@@ -32,7 +32,7 @@ class FirstActivity : AppCompatActivity() {
                 putExtra("EXTRA_LASTNAME", "Leon")
                 putExtra("EXTRA_AGE", 24)
             }
-              startActivity(secondIntent)
+              /*startActivity(secondIntent)*/
             register.launch(secondIntent)
         }
     }
