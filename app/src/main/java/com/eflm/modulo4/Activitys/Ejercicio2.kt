@@ -1,10 +1,11 @@
-package com.eflm.modulo4
+package com.eflm.modulo4.Activitys
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.eflm.modulo4.R
 
 class Ejercicio2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

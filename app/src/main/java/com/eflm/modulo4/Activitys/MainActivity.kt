@@ -1,8 +1,9 @@
-package com.eflm.modulo4
+package com.eflm.modulo4.Activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.eflm.modulo4.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
