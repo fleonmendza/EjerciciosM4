@@ -35,17 +35,18 @@
         app:layout_constraintEnd_toEndOf="@+id/glEnd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
+
     <EditText
-        android:inputType="textPassword"
-        android:hint="Password"
         android:id="@+id/password"
-        app:layout_constraintBottom_toTopOf="@+id/glButton"
+        android:layout_width="375dp"
+        android:layout_height="51dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintStart_toStartOf="@+id/glStart"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/glButton"
         app:layout_constraintEnd_toEndOf="@+id/glEnd"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
     <TextView
         android:text="Ya estas registrado?"
         android:gravity="center"

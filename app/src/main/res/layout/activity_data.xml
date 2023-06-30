@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tarea1.DataActivity"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glDRStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glDREnd"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+<LinearLayout
+    android:id="@+id/LlName"
+    app:layout_constraintTop_toTopOf="parent"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    app:layout_constraintStart_toStartOf="@+id/glDRStart"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvname"
+        android:layout_marginTop="30dp"
+        android:text="Nombre Ingresado:"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/glDRStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginEnd="10dp"/>
+    <TextView
+        android:id="@+id/tvDRName"
+        android:layout_marginTop="30dp"
+        android:text="Nombre"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/glDRStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        />
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/LlNameLast"
+        app:layout_constraintTop_toBottomOf="@+id/LlName"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/glDRStart"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvlastname"
+            android:layout_marginTop="30dp"
+            android:text="Apellido Ingresado:"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/glDRStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/tvDRLastName"
+            android:text="Apellido"
+            app:layout_constraintTop_toTopOf="@+id/tvDRName"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="@+id/glDRStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LlEmail"
+        app:layout_constraintTop_toBottomOf="@+id/LlNameLast"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/glDRStart"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvemail"
+            android:layout_marginTop="30dp"
+            android:text="Correo Ingresado:"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/glDRStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/tvDREmail"
+            android:text="Correo "
+            app:layout_constraintTop_toTopOf="@+id/tvDRLastName"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="@+id/glDRStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LlSexo"
+        app:layout_constraintTop_toBottomOf="@+id/LlEmail"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/glDRStart"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvsexo"
+            android:layout_marginTop="30dp"
+            android:text="Sexo Selecionado:"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/glDRStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/tvDRSexo"
+            android:text="Sexo "
+            app:layout_constraintTop_toTopOf="@+id/tvDREmail"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="@+id/glDRStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LlPassword"
+        app:layout_constraintTop_toBottomOf="@+id/LlSexo"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/glDRStart"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvpassword"
+            android:layout_marginTop="30dp"
+            android:text="Contrasena:"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/glDRStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/tvDRPassword"
+            android:text="Contrasena "
+            app:layout_constraintTop_toTopOf="@+id/tvDRSexo"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="@+id/glDRStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
