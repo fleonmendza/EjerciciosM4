@@ -11,7 +11,6 @@ class RecicleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recicle)
 
-
         val rvPerson = findViewById<RecyclerView>(R.id.personList)
         val personAdapter = PersonAdapter(arrayListOf(
             Person("1", "Juan", "Esta es la descripcion de una persona ramdom en una lista conv varias personas"),

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".practicafinal.LoginFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glRStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glREnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/layout_log_in"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    />
+
+    <ImageView
+        android:id="@+id/imLogin"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/logo_comida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvREmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/email"
+        app:layout_constraintStart_toStartOf="@+id/glRStart"
+        app:layout_constraintTop_toBottomOf="@+id/imLogin" />
+
+    <EditText
+        android:id="@+id/ipLEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/glREnd"
+        app:layout_constraintStart_toStartOf="@id/glRStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvREmail" />
+
+    <TextView
+        android:id="@+id/tvRPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Contrasena:"
+        app:layout_constraintStart_toStartOf="@+id/glRStart"
+        app:layout_constraintTop_toBottomOf="@+id/ipLEmail" />
+
+    <EditText
+        android:id="@+id/ipLPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/glREnd"
+        app:layout_constraintStart_toStartOf="@id/glRStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvRPassword" />
+
+    <TextView
+        android:id="@+id/linkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:clickable="true"
+        android:text="@string/label_for_register"
+        android:textColorLink="@android:color/holo_green_light"
+        app:layout_constraintBottom_toTopOf="@+id/btLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ipLPassword" />
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_bt_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

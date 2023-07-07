@@ -6,33 +6,51 @@
     android:layout_marginHorizontal="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:src="@mipmap/ic_launcher"
-        android:id="@+id/imgPerson"
-        app:layout_constraintStart_toStartOf="parent"
+    <androidx.cardview.widget.CardView
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="100dp"
-        android:layout_height="100dp"/>
-    <TextView
-        android:id="@+id/textPerson"
-        android:textAlignment="textStart"
-        app:layout_constraintTop_toTopOf="@+id/imgPerson"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgPerson"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:id="@+id/textDescription"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        app:layout_constraintStart_toEndOf="@id/imgPerson"
-        app:layout_constraintTop_toTopOf="@+id/imgPerson"
-        app:layout_constraintBottom_toBottomOf="@id/imgPerson"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="20dp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/img_android"
+                android:id="@+id/imgPerson"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+            <TextView
+                android:id="@+id/textPerson"
+                android:text="hola"
+                android:textAlignment="textStart"
+                app:layout_constraintTop_toTopOf="@+id/imgPerson"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgPerson"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/textDescription"
+                android:text="aaaaa"
+                app:layout_constraintStart_toEndOf="@id/imgPerson"
+                app:layout_constraintTop_toTopOf="@+id/imgPerson"
+                app:layout_constraintBottom_toBottomOf="@id/imgPerson"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

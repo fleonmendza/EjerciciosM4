@@ -13,26 +13,33 @@ import android.widget.RadioGroup
 import android.widget.Spinner
 import android.widget.Toast
 import com.eflm.modulo4.R
+import com.eflm.modulo4.databinding.ActivitySelectionComponentBinding
+import com.eflm.modulo4.databinding.ItemAnimalBinding
 
 class SelectionComponentActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivitySelectionComponentBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_selection_component)
+        binding = ActivitySelectionComponentBinding.inflate(layoutInflater)
 
-        val cbTc = findViewById<CheckBox>(R.id.cbTarjeta)
-        val btSend = findViewById<Button>(R.id.btSend)
-        val rgSex = findViewById<RadioGroup>(R.id.rgSex)
+        setContentView(binding.root)
+//        setContentView(R.layout.activity_selection_component)
+
+//        val cbTc = findViewById<CheckBox>(R.id.cbTarjeta)
+//        val btSend = findViewById<Button>(R.id.btSend)
+//        val rgSex = findViewById<RadioGroup>(R.id.rgSex)
 
         //CheeckBox
-        cbTc.setOnCheckedChangeListener { view, isChecked ->
-            Toast.makeText(this, "Con tarjeta = ${isChecked}", Toast.LENGTH_SHORT).show()
+        binding.cbTarjeta.setOnCheckedChangeListener { view, isChecked ->
+            Toast.makeText(this, "Con tarjeta = $isChecked", Toast.LENGTH_SHORT).show()
         }
 
         //RadioButton
-        rgSex.setOnCheckedChangeListener { view, checkedId ->
+        binding.rgSex.setOnCheckedChangeListener { view, checkedId ->
             val idName = when(checkedId){
-                R.id.rbHombre -> cbTc.visibility = View.VISIBLE
-                R.id.rbMujer -> cbTc.visibility = View.INVISIBLE
+                R.id.rbHombre -> binding.cbTarjeta.visibility = View.VISIBLE
+                R.id.rbMujer -> binding.cbTarjeta.visibility = View.INVISIBLE
                 else -> "Desconocido"
             }
             Toast.makeText(this, "isCheckedId = $idName", Toast.LENGTH_SHORT).show()
@@ -59,9 +66,9 @@ class SelectionComponentActivity : AppCompatActivity() {
 
 
         //Bonton
-        btSend.setOnClickListener {
-            val status = cbTc.isChecked
-            val rgSelet = when(rgSex.checkedRadioButtonId){
+       binding.btSend.setOnClickListener {
+            val status = binding.cbTarjeta.isChecked
+            val rgSelet = when(binding.rgSex.checkedRadioButtonId){
                 R.id.rbHombre -> "H"
                 R.id.rbMujer -> "M"
                 else -> "Desconocido"

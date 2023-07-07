@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Modulo4</string>
+    <string name="title_register">Sign up!</string>
+    <string name="email">Email:</string>
+    <string name="label_title_fragment">Ejemplo de Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="layout_log_in">Log In</string>
+    <string name="label_for_register">Do you not have an account? Sign up</string>
+    <string name="label_bt_login">Log In</string>
 </resources>

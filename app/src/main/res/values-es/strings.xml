@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Modulo4</string>
+    <string name="title_register">Registrate!</string>
+    <string name="email">Correo electronico:</string>
+    <string name="label_title_fragment">Ejemplo de Fragment</string>
+    <string name="hello_blank_fragment" >Hola fragmento en blanco</string>
+    <string name="layout_log_in">Inicia Sesion</string>
+    <string name="label_for_register">No tienes cuenta? Registrate!</string>
+    <string name="label_bt_login">Inicia Sesion</string>
+</resources>
